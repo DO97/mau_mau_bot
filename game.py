@@ -36,13 +36,14 @@ class Game(object):
     starter = None
     mode = DEFAULT_GAMEMODE
     job = None
-    owner = ADMIN_LIST
     open = OPEN_LOBBY
     translate = ENABLE_TRANSLATIONS
 
     def __init__(self, chat):
         self.chat = chat
         self.last_card = None
+
+        self.owner = ADMIN_LIST.copy()
 
         self.deck = Deck()
 
